@@ -1,0 +1,184 @@
+html {
+    font-size: 62.5%; /* =10px */
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;    
+}
+
+body{
+    min-height: 60rem;
+    background-color: #183642;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 35.7rem;
+    background-color: #EAEAEA;
+    border-radius: 1.5rem;
+    padding: 1.5rem 3rem;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.form{
+    width: 100%;
+}
+
+.formContainer:not(:last-of-type){
+    margin-block: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer:last-of-type{
+    margin-block: 1.5rem;
+    display: flex;
+}
+
+.formContainer label{
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-block: .3rem;
+}
+
+/* Ocultar los botones de incremento y decremento en los inputs de tipo número */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Opcional: Estilos adicionales para personalizar la apariencia del input */
+input[type="number"] {
+  /* Estilos personalizados */
+  outline: none;
+}
+
+
+.formContainer label:last-of-type{
+    margin-right: 1rem;
+    border: none;
+}
+
+.mensajeError{
+    background-color: #D62246;
+    padding: .5rem;
+    text-align: center;
+    border-radius: .4rem;
+    color: #EAEAEA;
+    margin: 1rem 0 0;
+}
+
+#boton{
+    all: none;
+    width: 100%;
+    background-color: #77966D;
+    border: none;
+    border-radius: .3rem;
+    padding-block: .5rem;
+    color: #EAEAEA;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+/* Contenedores de los numeros */
+.contenedorNumeros{
+    width: 95%;
+    background-color: #EAEAEA;
+    margin-block: 1rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.listaNumeros{
+    all: unset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media (min-width: 700px) {
+    .contenedorNumeros{
+        width: 50%;
+    }
+    
+    .listaNumeros{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedorNumeros{
+        width: 100%;
+        max-width: 70rem;
+    }
+    
+    .listaNumeros{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.numeroLi{
+    list-style: none;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #0f0f0f6b;
+}
+
+.numeroLiAro{
+    width: 45%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0f0f0f;
+    border-radius: 50%;
+    background-color: #EAEAEA;
+}
+
+
+.numeroLiAro::after{
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    border-radius: 50%;
+    background-color: #ffffff15;
+}
+
+.numeroLiBorder{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: #EAEAEA;
+}
