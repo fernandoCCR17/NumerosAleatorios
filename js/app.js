@@ -61,9 +61,9 @@ function generaNumerosAleatorios(rango, numeros, repetir){
     while(arreglo.length < numeros){
         const numero = Math.floor(Math.random() * (rango + 1)); 
         if (!repetir){
-            !arreglo.includes(numero) && numero != 0 ? arreglo.push(numero):''
+            !arreglo.includes(numero) ? arreglo.push(numero):''
         }else{
-            numero != 0 ? arreglo.push(numero) : ''
+            arreglo.push(numero)
         }
     } 
 
