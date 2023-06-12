@@ -26,7 +26,7 @@ function validaForm(e){
     }
 
     if(rango < 1){
-        generaMensajeError("El rango debe ser mayor o igual a 2");
+        generaMensajeError("El rango debe ser mayor o igual a 1");
         return
     }
     
